@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 
 const Navbar = () => {
     //*Now this amount state is comming from reducer index.js 
+    //*through useSelector we are accessing currentstate of our varibale
     const amount=useSelector(state=>state.amount)
     return (
         <div>

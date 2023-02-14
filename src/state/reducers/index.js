@@ -2,9 +2,11 @@
 
 import { combineReducers } from "redux";
 import amountreducer from "./amountreducer";
+import amountmultiplier from "./amountmultiplier"
 
-const reducer=combineReducers({
-    amount:amountreducer
+const rootreducer=combineReducers({
+    amountreducer,
+    amountmultiplier
 })
 
-export default reducer
+export default rootreducer

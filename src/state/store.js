@@ -4,8 +4,9 @@
 
 //!after taking all reducers it will create a store and export it to app.js
 
-import { applyMiddleware,legacy_createStore } from "redux";
+import { applyMiddleware,legacy_createStore ,compose} from "redux";
 import thunk from "redux-thunk";
-import reducers from "./reducers";
+import rootreducers from "./reducers";
+const composedEnhancer = compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
-export const store=legacy_createStore(reducers,{},applyMiddleware(thunk))
+export const store=legacy_createStore(rootreducers,{},composedEnhancer)

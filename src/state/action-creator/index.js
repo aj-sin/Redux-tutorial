@@ -9,6 +9,22 @@ export const depositMoney=(amount)=>{
             })
         }
 }
+export const MultiplyMoney=(amount)=>{
+        return (dispatch)=>{
+            dispatch({
+                type:"multiply",
+                payload:amount
+            })
+        }
+}
+export const DivideMoney=(amount)=>{
+        return (dispatch)=>{
+            dispatch({
+                type:"divide",
+                payload:amount
+            })
+        }
+}
 export const WithdrawMoney=(amount)=>{
         return (dispatch)=>{
             dispatch({
